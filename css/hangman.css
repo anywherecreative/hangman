@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+BODY {
+	background: url(../images/stain.png) top left no-repeat, url(../images/bg.png);
+	color: #000;
+	font-family: "Indie Flower", sans-serif;
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.left {
+	text-align: right;
+}
+.right {
+	text-align: left;
+}
+.right LABEL P {
+	font-size: 24px;
+	padding-top: 40px;
+}
+.right LABEL INPUT#guess {
+	width: 40px;
+}
+ASIDE.board UL {
+	padding: 20px 0 0 10px;
+}
+ASIDE.board UL LI {
+	background: url(../images/uline.png) bottom center no-repeat;
+	display: inline-block;
+	font-size: 28px;
+	margin: 8px;
+	padding-bottom: 32px;
+	text-align: center;
+	height: 28px;
+	width: 20px;
+	vertical-align: bottom;
+}
+UL#guesses {
+	padding: 0;
+}
+UL#guesses LI {
+	display: inline-block;
+	font-size: 24px;
+	padding: 10px;
+}
+INPUT#newGame {
+	display: none;
+}
+ASIDE#score {
+	font-size: 18px;
+}

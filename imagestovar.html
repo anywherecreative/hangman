@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="578" height="400"></canvas>
+	<canvas id="myCanvas2" width="578" height="400"></canvas>
+	<div></div>
+	<script src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+
+      imageObj.onload = function() {
+        context.drawImage(imageObj, 69, 50);		
+      };
+      imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+	  
+	  localStorage.setItem('test', canvas.toDataURL());
+	  
+	var dataURL = localStorage.getItem('test');
+	var canvas2 = document.getElementById('myCanvas2');
+	var context2 = canvas2.getContext('2d');
+	var img = new Image;
+	img.src = dataURL;
+	img.onload = function () {
+		context2.drawImage(img, 0, 0);
+	};
+    </script>
+  </body>
+</html>    
